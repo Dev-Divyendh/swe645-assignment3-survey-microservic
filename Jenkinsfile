@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Building the project...'
+                echo 'Building the projects...'
                 // Add your build steps here
             }
         }
