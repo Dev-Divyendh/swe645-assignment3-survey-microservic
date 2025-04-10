@@ -4,24 +4,22 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checkout the code from GitHub repository
-                git 'https://github.com/your-username/jenkins-dummy-cicd.git'
+                git(
+                    url: 'https://github.com/Dev-Divyendh/swe645-assignment3-survey-microservic.git', // Correct URL
+                    credentialsId: 'github-creds' // Use the credentials you've set up for GitHub
+                )
             }
         }
-
         stage('Build') {
             steps {
-                // Print a message to show the build is working
                 echo 'Building the project...'
-                sh 'echo "Build complete!"'
+                // Add your build steps here
             }
         }
-
         stage('Deploy') {
             steps {
-                // Simulate a deployment message
-                echo 'Deploying application...'
-                sh 'echo "Deployment complete!"'
+                echo 'Deploying the project...'
+                // Add your deploy steps here
             }
         }
     }
